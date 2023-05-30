@@ -8,12 +8,7 @@ function printOwing(invoice) {
 }
 
 function printOwing({customer}) {
-    printBanner();
-    const amount = calculateOutstanding();
 
-    // print details
-    console.log(`name: ${customer}`)
-    console.log(`amount: ${amount}`)
 }
 
 
@@ -27,12 +22,7 @@ function getPrice() {
 }
 
 function getPrice(){
-    const { quantity, itemPrice } = order;
-    const maxQuantity = Math.max(0, quantity - 500);
-    const minPrice = Math.min(quantity * itemPrice * 0.1, 100);
-    const priceValue = itemPrice * 0.05;
 
-    return quantity * itemPrice - maxQuantity * priceValue + minPrice;
 }
 
 
@@ -58,19 +48,7 @@ function getPayAmount() {
 }
 
 function getPayAmount(){
-    if (isDead) {
-        return deadAmount();
-    } else {
-        if (isSeparated) {
-            return separatedAmount();
-        } else {
-            if (isRetired) {
-                return retiredAmount();
-            } else {
-                return normalPayAmount();
-            }
-        }
-    }
+
 }
 
 //------------------------------------------------------------
@@ -86,5 +64,8 @@ function setDimension(name, value) {
         return
     }
 }
+
+
+
 
 
