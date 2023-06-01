@@ -1,5 +1,5 @@
 function printOwing(invoice) {
-    printBanner()
+    var banner = printBanner();
     let outstanding = calculateOutstanding()
 
     // print details
