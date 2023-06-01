@@ -1,4 +1,5 @@
-'use strict';
+
+    'use strict';
 
 const plays = require('./plays.json');
 const invoices = require('./invoices.json');
