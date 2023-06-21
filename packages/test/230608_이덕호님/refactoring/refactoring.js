@@ -8,7 +8,10 @@ function printOwing(invoice) {
 }
 
 function printOwing({customer}) {
+    let outstanding = calculateOutstanding();
 
+    console.log(`name: ${customer}`);
+    console.log(`amount: ${outstanding}`);
 }
 
 
@@ -22,7 +25,12 @@ function getPrice() {
 }
 
 function getPrice(){
+    let quantity = order.quantity;
+    let price = order.itemPrice;
 
+    let answer = quantity * price - Math.max()
+
+    return quantity*price -
 }
 
 
@@ -44,6 +52,11 @@ function getPayAmount() {
             }
         }
     }
+
+    switch
+        case isDead:
+            result =  deadAmount();
+            return result;
     return result
 }
 
@@ -59,7 +72,7 @@ function setDimension(name, value) {
         this._height = value
         return
     }
-    if (name === 'width') {
+    else if (name === 'width') {
         this._width = value
         return
     }
