@@ -7,12 +7,7 @@ function printOwing(invoice) {
     console.log(`amount: ${outstanding}`)
 }
 
-function printOwing({customer}) {
-    let outstanding = calculateOutstanding()
-
-    // print details
-    console.log(`name: ${customer}`)
-    console.log(`amount: ${outstanding}`)
+function printOwing() {
 
 }
 
@@ -26,15 +21,8 @@ function getPrice() {
         Math.min(order.quantity * order.itemPrice * 0.1, 100)
 }
 
-function getPrice({order}){
-    const {quantity, itemPrice} = order
+function getPrice(){
 
-    const maxQuantity = Math.max(0, quantity - 500)
-    const minQuantity = Math.min(quantity * itemPrice * 0.1, 100)
-
-    return (quantity * itemPrice) -
-        ma * order.itemPrice * 0.05 +
-        Math.min(order.quantity * order.itemPrice * 0.1, 100)
 }
 
 
@@ -60,40 +48,26 @@ function getPayAmount() {
 }
 
 function getPayAmount(){
-    let result
 
-    if (isDead) {
-        result = deadAmount()
-        return result
-    }
-    if (isSeparated) {
-        result = separatedAmount()
-        return result
-    }
-    if (isRetired) {
-        result = retiredAmount()
-        return result
-    }
-    result = normalPayAmount()
-
-    return result
 }
 
 //------------------------------------------------------------
 
 
 function setDimension(name, value) {
-
-
-
-    switch (name) {
-        case 'height':
-            this._height = value
-            return
-        case 'width':
-            this._width = value
-            return
+    if (name === 'height') {
+        this._height = value
+        return
+    }
+    if (name === 'width') {
+        this._width = value
+        return
     }
 }
+
+function setDimension(name, value) {
+
+}
+
 
 
