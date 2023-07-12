@@ -8,8 +8,7 @@ function printOwing(invoice) {
 }
 
 function printOwing() {
-    const banner = printBanner();
-    const outstanding = calculateOutstanding()
+
 }
 
 
@@ -23,6 +22,11 @@ function getPrice() {
 }
 
 function getPrice(){
+    {quantity, itemPrice, ...} =
+        const asdf = 500;
+    const itemCoef = 0.05;
+    const asdffwqe = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05
+    const wqe = Math.min(order.quantity * order.itemPrice * 0.1, 100)
 
 }
 
@@ -34,21 +38,10 @@ function getPayAmount() {
     let result
     if (isDead) {
         result = deadAmount()
-    }
-    if (isSeparated) {
-        result = separatedAmount()
-    }
-
-    if (isRetired) {
-        result = retiredAmount()
-    }
-
-    if (isRetired) {
-        result = retiredAmount()
-    }
-
-    else {
-         else {
+    } else {
+        if (isSeparated) {
+            result = separatedAmount()
+        } else {
             if (isRetired) {
                 result = retiredAmount()
             } else {
@@ -59,8 +52,22 @@ function getPayAmount() {
     return result
 }
 
-function getPayAmount(){
+function retiredAmount() {
+    if (isRetired) {
+        result = retiredAmount()
+    } else {
+        result = normalPayAmount()
+    }
+}
 
+
+function sepAmount() {
+    isSeparated ? separatedAmount() : retiredAmount();
+}
+
+function getPayAmount(){
+    let result
+    isDead ? deadAmount() : sepAmount()
 }
 
 //------------------------------------------------------------
