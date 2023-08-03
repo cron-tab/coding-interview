@@ -5,6 +5,20 @@ function getPrice() {
 }
 
 
+const getPrice =()=> {
+
+    const a = order.qu
+    const b= order. p
+
+    const max =
+        const min =
+            const result = a+b max min
+            return resutl
+}
+    order.quantity * order.itemPrice -
+    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
+    Math.min(order.quantity * order.itemPrice * 0.1, 100)
+
 
 function getPrice(){
 
@@ -30,9 +44,21 @@ function getPayAmount() {
         }
     }
     return result
+
 }
 
+
+
 function getPayAmount(){
+
+}
+
+const getpayAmout = ()=>{
+
+    case
+        switch ()
+
+        raes
 
 }
 
